@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
-
   before_action :find_game, only: [:destroy, :update, :edit, :show]
+
   def new
     @game = Game.new
   end
@@ -20,7 +20,6 @@ class GamesController < ApplicationController
   end
 
   def show
-    @user = User.new
   end
 
   def destroy
