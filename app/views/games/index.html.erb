@@ -3,9 +3,8 @@
 
 
 <ul>
-  <% @games.each do |game| %>
-    <%= game.name %>
-  <% end %>
-</ul>
+<% @games.each do |game| %>
 
-<%= @games %>
+  <li><%= link_to game.name.capitalize, game_path(game)%></li>
+<% end %>
+</ul>
