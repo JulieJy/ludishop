@@ -1,12 +1,16 @@
 <div class="container">
   <div class="game-detail">
 
-    <%= @game.user.photo %>
-    <h2><%= @game.user.first_name %> <%= @game.user.last_name %></h2>
-    <img class="game-picture" src="<%= @game.picture %>" alt="">
+    <div class="container game-user">
+      <img src="<%= @game.user.photo %>" class="avatar-bordered" alt="">
+      <h2><%= @game.user.first_name %> <%= @game.user.last_name %></h2>
+    </div>
+    <img class="game-picture" src="<%= @game.photo %>" alt="">
     <p class="game-price"><%= @game.price %>0€</p>
-    <h3 ><%= @game.name %></h3>
-    <p><%= @game.description %></p>
+    <div class="game-title-desc">
+      <h3 ><%= @game.name %></h3>
+      <p><%= @game.description %></p>
+    </div>
   </div>
 </div>
 
