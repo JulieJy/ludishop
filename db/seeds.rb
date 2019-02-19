@@ -10,8 +10,6 @@
 user1 = User.create(first_name: "John", last_name: "Lennon", email: "john@lennon.com", password: "secret")
 user2 = User.create(first_name: "Matthew", last_name: "Bellamy", email: "matthew@bellamy.com", password: "secret")
 
-p user1
-p user2
 
 p 'I destroy all games'
 Game.destroy_all
@@ -30,11 +28,3 @@ Smallworld est un jeu de stratégie et de plateau qui vous plonge dans un monde 
 Game.create(user: user2, name:"Dominion", description: "Développez vos terres et faites de votre royaume le plus grand et le plus riche dans ce jeu de cartes stratégique !", price: 16, picture: "https://www.espritjeu.com/upload/image/dominion-p-image-56141-grande.jpg")
 Game.create(user: user2, name:"Unlock 2!", description: "Unlock! 2 Mystery Adventures est un jeu de cartes coopératif inspiré des Escape Room.", price: 17, picture: "https://www.espritjeu.com/upload/image/unlock--2---mystery-adventures-p-image-62011-grande.jpg")
 p 'Finished !'
-
-# first_game = Game.new()
-# first_game.user = user1
-# first_game.name = "Code names"
-# first_game.description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit non porro delectus, quibusdam facere ad nostrum asperiores a, pariatur nisi iusto officiis! Eum, labore quae asperiores officia tempore rerum soluta?"
-# first_game.price = 19
-
-# first_game.save!
