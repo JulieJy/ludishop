@@ -1,6 +1,3 @@
-<h1>Buy a game</h1>
-<p>Because u'll never have enough !</p>
-
 <div class="container">
   <div class="row">
     <% @games.each do |game| %>
@@ -13,6 +10,7 @@
               <p><%=game.description%></p>
             </div>
             <h2 class="card-trip-pricing"><%=game.price%>€</h2>
+            <%= link_to "", game_path(game), class: 'card-link'%>
             <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
           </div>
         </div>
