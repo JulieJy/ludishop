@@ -12,6 +12,7 @@
             <th>Address</th>
             <th>Email</th>
             <th>Phone Number</th>
+            <th>Reviews</th>
           </thead>
             <tr>
               <td><%= @user.first_name %></td>
@@ -19,9 +20,14 @@
               <td><%= @user.address %></td>
               <td><%= @user.email %></td>
               <td><%= @user.phone_number %></td>
+              <% @user.reviews.each do |review| %>
+                <td><%= review.content %></td>
+                <td><%= review.rate %></td>
+              <% end %>
             </tr>
         </tbody>
       </table>
+      <%= link_to "Add Review", new_user_review_path(@user), class: "btn btn-primary" %>
     </div>
   </div>
 </div>
