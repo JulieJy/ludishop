@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :profiles, only: :show
   resources :reviews, only: [:index]
   resources :users, only: [] do
     resources :reviews, only: :create
