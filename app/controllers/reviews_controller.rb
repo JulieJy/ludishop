@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to user_path(@user)
     else
-      render 'user/show'
+      render :new
     end
   end
 
