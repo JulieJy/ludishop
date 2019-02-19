@@ -9,10 +9,8 @@ class GamesController < ApplicationController
     @game = Game.new(game_params)
     @game.user = current_user
     if @game.save!
-      p 'oui'
       redirect_to game_path(@game)
     else
-      p 'non'
       render :new
     end
   end
