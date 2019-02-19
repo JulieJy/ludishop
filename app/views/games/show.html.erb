@@ -1,2 +1,12 @@
-<h1>Games#show</h1>
-<p>Find me in app/views/games/show.html.erb</p>
+<div class="container">
+  <div class="game-detail">
+
+    <%= @game.user.photo %>
+    <h2><%= @game.user.first_name %> <%= @game.user.last_name %></h2>
+    <img class="game-picture" src="<%= @game.picture %>" alt="">
+    <p class="game-price"><%= @game.price %>0€</p>
+    <h3 ><%= @game.name %></h3>
+    <p><%= @game.description %></p>
+  </div>
+</div>
+
