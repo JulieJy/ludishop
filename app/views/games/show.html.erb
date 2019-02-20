@@ -1,22 +1,36 @@
 <div class="container game-show">
   <div class="game-detail">
-
+    <!-- Informations about seller of game -->
     <div class="container game-user">
       <img src="<%= @game.user.photo %>" class="avatar-bordered" alt="">
       <h2><%= @game.user.first_name %> <%= @game.user.last_name %></h2>
     </div>
+
+    <!-- picture of the game -->
     <img class="game-picture" src="<%= @game.photo %>" alt="">
+
+    <!-- price of the game -->
     <p class="game-price"><%= @game.price %>0€</p>
+
+    <!-- description of the game -->
     <div class="game-title-desc">
       <h3 ><%= @game.name %></h3>
       <p><%= @game.description %></p>
     </div>
   </div>
 
+
+  <!-- Buttons -->
+
+  <!-- if game has been bought -->
   <% if @game.buyer_id != nil %>
     <a class="btn btn-ghost" href="#">This game is sold !</a>
+
+  <!-- if you are the seller of the game -->
   <% elsif @game.user.id == current_user.id %>
     <a class="btn btn-ghost btn-delete" data-method="delete" href="<%=game_path%>">Delete this game</a>
+
+  <!-- if not -->
   <% else %>
     <a class="btn btn-ghost btn-buy" href="<%=payment_path%>">Buy this game</a>
   <% end %>
