@@ -26,11 +26,14 @@
 
   <!-- Buttons -->
 
+  <!-- if not logged in -->
+  <% if current_user == nil %>
+    <a class="btn btn-ghost btn-buy" href="<%=payment_path%>">Buy this game</a>
   <!-- if game has been bought -->
-  <% if @game.buyer_id != nil %>
+  <% elsif @game.buyer_id != nil %>
     <a class="btn btn-ghost" href="#">This game is sold !</a>
-
   <!-- if you are the seller of the game -->
+
   <% elsif @game.user.id == current_user.id %>
     <a class="btn btn-ghost btn-delete" data-method="delete" href="<%=game_path%>">Delete this game</a>
 
