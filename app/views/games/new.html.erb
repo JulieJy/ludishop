@@ -1,2 +1,18 @@
-<h1>Games#new</h1>
-<p>Find me in app/views/games/new.html.erb</p>
+
+<div class="container">
+  <div class="row color_create">
+    <div class="col-md-8 col-md-offset-2 ">
+      <h1>Create a new game</h1>
+
+      <%= simple_form_for @game do |f| %>
+        <%= f.input :name, class: 'bg-secondary' %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>

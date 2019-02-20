@@ -3,13 +3,21 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
   end
 
+  def new
+    @review = Review.new
+    @user = User.find(params[:user_id])
+  end
+
+  # POST /users/:user_id/reviews
   def create
+    @user = User.find(params[:user_id])
     @review = Review.new(review_params)
-    @review.user = User.find(params[:user_id])
+    @review.user = @user
+
     if @review.save
-      redirect_to user_path(@user)
+      redirect_to profile_path(@user)
     else
-      render 'user/show'
+      render :new
     end
   end
 

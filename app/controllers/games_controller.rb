@@ -1,15 +1,17 @@
 class GamesController < ApplicationController
   before_action :find_game, only: [:destroy, :update, :edit, :show]
+
   def new
     @game = Game.new
   end
 
   def create
     @game = Game.new(game_params)
-    if @game.save
+    @game.user = current_user
+    if @game.save!
       redirect_to game_path(@game)
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -18,7 +20,6 @@ class GamesController < ApplicationController
   end
 
   def show
-    @user = User.new
   end
 
   def destroy
@@ -33,6 +34,6 @@ class GamesController < ApplicationController
   end
 
   def game_params
-    params.require(:game).permit(:name, :description, :state, :price)
+    params.require(:game).permit(:name, :description, :state, :price, :photo)
   end
 end
