@@ -7,11 +7,13 @@
           <img src="<%=game.photo%>">
 
           <div class="card-trip-infos">
-            <div>
+            <div class="card-text">
+              <br>
               <h2><%=game.name%></h2>
+              <br>
               <p><%=game.description%></p>
             </div>
-            <h2 class="card-trip-pricing"><%=game.price%>€</h2>
+            <h2 class="card-trip-pricing btn-price-card"><i><%=game.price%>€</i></h2>
             <%= link_to "", game_path(game), class: 'card-link'%>
             <img src="<%=game.user.photo%>" class="card-trip-user avatar-bordered"/>
           </div>

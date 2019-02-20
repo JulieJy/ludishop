@@ -64,6 +64,16 @@
 //   justify-content : space-around;
 //   align-items : center;
 // }
+// .ellipsis{
+//     width: 100px;
+//   }
+
+.card-text {
+  text-align: center;
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
+  // overflow: hidden;
+}
 
 .card-link {
   height: 100%;
@@ -71,4 +81,21 @@
   position: absolute;
   right: 0px;
   top: 0px;
+}
+
+.card-trip-pricing {
+ position: absolute;
+  right: 4%;
+  top: -175px;
+  width: 56px;
+  margin: auto;
+  z-index: 2;
+}
+
+.btn-price-card {
+  background-color: #ffffff;
+  // border: 1px solid #a23b4f;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-weight: lighter;
 }
