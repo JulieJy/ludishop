@@ -10,4 +10,6 @@ class User < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
+  has_many :sold_games, -> { where.not(buyer_id: nil) }, class_name: 'Game'
+  has_many :bought_games, class_name: 'Game', foreign_key: :buyer_id
 end
