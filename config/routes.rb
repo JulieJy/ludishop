@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "/payment", to: "pages#payment"
+  get "/my_profile", to: 'profiles#my_profile'
   resources :profiles, only: [:show, :edit, :update]
   resources :reviews, only: [:index]
   resources :users, only: [] do

@@ -15,6 +15,11 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def my_profile
+    @user = current_user
+    render :show
+  end
+
   private
 
   def user_params

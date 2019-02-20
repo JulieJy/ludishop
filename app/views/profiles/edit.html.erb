@@ -3,7 +3,7 @@
     <div class="col-md-8 col-md-offset-2">
       <h1>Update your profile</h1>
 
-      <%= simple_form_for @user, url: profile_path do |f| %>
+      <%= simple_form_for @user, url: my_profile_path do |f| %>
         <%= f.input :first_name %>
         <%= f.input :last_name %>
         <%= f.input :address %>
