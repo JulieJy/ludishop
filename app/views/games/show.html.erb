@@ -18,7 +18,7 @@
   <% elsif @game.user.id == current_user.id %>
     <a class="btn btn-ghost btn-delete" href="#">Delete this game</a>
   <% else %>
-    <a class="btn btn-ghost btn-buy" href="#">Buy this game</a>
+    <a class="btn btn-ghost btn-buy" href="<%=payment_path%>">Buy this game</a>
   <% end %>
 </div>
 
