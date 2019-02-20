@@ -28,6 +28,9 @@ class GamesController < ApplicationController
     redirect_to games_path
   end
 
+  def payment
+  end
+
   private
 
   def find_game
