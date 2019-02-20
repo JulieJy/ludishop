@@ -28,7 +28,7 @@
 
   <!-- if not logged in -->
   <% if current_user == nil %>
-    <a class="btn btn-ghost btn-buy" href="<%=payment_path%>">Buy this game</a>
+    <a class="btn btn-ghost btn-buy" href="<%=game_payment_path%>">Buy this game</a>
   <!-- if game has been bought -->
   <% elsif @game.buyer_id != nil %>
     <a class="btn btn-ghost" href="#">This game is sold !</a>
@@ -39,7 +39,7 @@
 
   <!-- if not -->
   <% else %>
-    <a class="btn btn-ghost btn-buy" href="<%=payment_path%>">Buy this game</a>
+    <a class="btn btn-ghost btn-buy" href="<%=game_payment_path%>">Buy this game</a>
   <% end %>
 </div>
 
