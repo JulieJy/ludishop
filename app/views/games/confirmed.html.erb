@@ -1,0 +1,43 @@
+<style type="text/css">
+
+.alerta{
+  border-radius: 10px;
+  margin: 30px auto;
+  padding: 30px;
+
+}
+.boton{
+  padding: 10px;
+}
+
+</style>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-4">
+
+<div class="mt-3">
+    <div class="alert alert-info alerta" role="alert">
+         <h4 class="alert-heading">Well done!</h4>
+             <p>Yo have buy a game! </p>
+        </div>
+
+     <div class="list-group">
+         <p href="#" class="list-group-item">
+         Here are the seller info:
+          </p>
+        <p class="list-group-item"><%= @user.first_name %></p>
+        <p class="list-group-item"><%= @user.address %></p>
+        <p href="#" class="list-group-item"><%= @user.phone_number %></p>
+     </div>
+
+
+     <%= link_to "Go to my profile", profile_path(current_user), class: "btn btn-primary boton" %>
+    <%= link_to "Go to all games", games_path, class: "btn btn-primary boton" %>
+
+</div>
+ </div>
+</div>
+</div>
