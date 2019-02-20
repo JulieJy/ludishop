@@ -13,9 +13,12 @@
     </div>
   </div>
 
-
-
-
-  <a class="btn btn-ghost btn-buy" href="#">Buy this game !</a>
+  <% if @game.buyer_id != nil %>
+    <a class="btn btn-ghost" href="#">This game is sold !</a>
+  <% elsif @game.user.id == current_user.id %>
+    <a class="btn btn-ghost btn-delete" href="#">Delete this game</a>
+  <% else %>
+    <a class="btn btn-ghost btn-buy" href="#">Buy this game</a>
+  <% end %>
 </div>
 

@@ -62,3 +62,18 @@
   opacity: 1;
   color : white;
 }
+
+.btn-delete {
+  background-color: #a23b4f;
+  border: 1px solid #a23b4f;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  color : white;
+}
+.btn-delete:hover {
+  opacity: 1;
+  color : white;
+}
