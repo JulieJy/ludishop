@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   resources :games, only: [:new, :create, :index, :show, :destroy]
   get "/game/:id/payment", to: "games#payment", as: "game_payment"
+  get "/game/:id/payment/confirmed", to: "games#confirmed", as: "game_payment_confirmed"
 
   root to: 'games#index'
   devise_for :users
