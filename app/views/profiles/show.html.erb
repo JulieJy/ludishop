@@ -27,6 +27,26 @@
             </tr>
         </tbody>
       </table>
+
+      <h4>Transactions</h4>
+        <h5>Sold</h5>
+          <% unless @user.sold_games == nil %>
+            <ul>
+              <% @user.sold_games.each do |sold_game| %>
+                <li>You have sold <%= sold_game.name %> on the following date <%= Time.now %></li>
+              <% end %>
+            </ul>
+          <% end %>
+
+          <h5>Bought</h5>
+            <% unless @user.bought_games == nil %>
+              <ul>
+                <% @user.bought_games.each do |bought_game| %>
+                  <li>You have bought <%= bought_game.name %> on the following date <%= Time.now %></li>
+                <% end %>
+              </ul>
+            <% end %>
+
       <%= link_to "Add Review", new_user_review_path(@user), class: "btn btn-primary" %>
       <%= link_to "Edit Profile", edit_profile_path(@user), class: "btn btn-primary" %>
     </div>
