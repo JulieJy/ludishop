@@ -16,7 +16,7 @@
   <% if @game.buyer_id != nil %>
     <a class="btn btn-ghost" href="#">This game is sold !</a>
   <% elsif @game.user.id == current_user.id %>
-    <a class="btn btn-ghost btn-delete" href="#">Delete this game</a>
+    <a class="btn btn-ghost btn-delete" data-method="delete" href="<%=game_path%>">Delete this game</a>
   <% else %>
     <a class="btn btn-ghost btn-buy" href="<%=payment_path%>">Buy this game</a>
   <% end %>
