@@ -4,7 +4,7 @@
 
       <h3>Profile</h3>
       <table class="table table-bordered">
-        <img src="<%= @user.picture %>" alt="profile-picture" class="avatar">
+        <img src="<%= @user.photo %>" alt="profile-picture" class="avatar">
         <tbody>
           <thead>
             <th>First Name</th>
@@ -28,6 +28,7 @@
         </tbody>
       </table>
       <%= link_to "Add Review", new_user_review_path(@user), class: "btn btn-primary" %>
+      <%= link_to "Edit Profile", edit_profile_path(@user), class: "btn btn-primary" %>
     </div>
   </div>
 </div>
