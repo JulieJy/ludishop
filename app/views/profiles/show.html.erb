@@ -45,9 +45,11 @@
                   <li>You have bought <%= bought_game.name %> on the following date <%= Time.now %></li>
                 <% end %>
               </ul>
+            <%= link_to "Add Review", new_user_review_path(@user), class: "btn btn-primary" %>
             <% end %>
-
-      <%= link_to "Add Review", new_user_review_path(@user), class: "btn btn-primary" %>
+          <br>
+          <br>
+          <br>
       <%= link_to "Edit Profile", edit_profile_path(@user), class: "btn btn-primary" %>
     </div>
   </div>
