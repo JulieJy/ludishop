@@ -12,6 +12,7 @@ gem 'devise'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
 
+gem 'sweetalert2', '~> 0.0.4'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
