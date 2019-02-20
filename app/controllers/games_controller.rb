@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :find_game, only: [:destroy, :update, :edit, :show]
+
   def new
     @game = Game.new
   end
@@ -20,7 +21,6 @@ class GamesController < ApplicationController
   end
 
   def show
-    @user = User.new
   end
 
   def destroy

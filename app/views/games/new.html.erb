@@ -1,14 +1,11 @@
 
- <%= cl_image_tag("games",
-      width: 1260, height: 300,) %>
-
 <div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+  <div class="row color_create">
+    <div class="col-md-8 col-md-offset-2 ">
       <h1>Create a new game</h1>
 
       <%= simple_form_for @game do |f| %>
-        <%= f.input :name %>
+        <%= f.input :name, class: 'bg-secondary' %>
         <%= f.input :description %>
         <%= f.input :price %>
         <%= f.input :photo %>

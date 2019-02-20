@@ -6,8 +6,8 @@
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-      <%= link_to "Find a game", "/index", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "+ Add a new game", "games/new", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Find a game", games_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "+ Add a new game", new_game_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% if user_signed_in? %>
 
@@ -17,10 +17,12 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+
+         <img src="<%=current_user.photo%>" class="avatar dropdown-toggle" id ="navbar-wagon-menu" data-toggle="dropdown"/>
+
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <%= link_to "/profiles/id" do %>
+              <%= link_to profile_path(current_user) do %>
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
               <% end %>
             </li>
