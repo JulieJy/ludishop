@@ -4,15 +4,17 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-
 <div class="container">
-  <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-      <div id="games">
-        <% @games.each do |game| %>
-          <h4><%= game.title %></h4>
-        <% end %>
-      </div>
-    </div>
-  </div>
+      <div class="row">
+
+         <div class="search-bar">
+          <%= form_tag games_path, class: 'form-search', method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+         class: "form-control",
+         placeholder: "Find a game"
+         %>
+         <% end %>
+       </div>
+   </div>
 </div>
