@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
   has_many :games
-  has_many :reviews
+  has_many :reviews, foreign_key: :receiver_id
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

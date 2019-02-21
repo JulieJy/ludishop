@@ -2,3 +2,122 @@
   height: 150px;
   border-radius: 50%;
 }
+
+#user_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  background-color: white;
+  padding: 15px 0px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+#profil_pic {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+h5 {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #EDEDED;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+#my_reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  background-color: white;
+  padding: 15px 0px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.italic {
+  font-style: italic;
+}
+
+#games_on_sale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  background-color: white;
+  padding: 15px 0px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+#transactions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  background-color: white;
+  padding: 15px 0px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.btn-review {
+  background-color: #f05d59;
+  padding: 4px 11px 2px 11px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  color : white;
+}
+
+.btn-review:hover {
+  opacity: 1;
+  text-decoration: none;
+  color : white;
+}
+
+.review_btn {
+  position: absolute;
+  right: 80px;
+}
+
+#btn-range {
+  margin-top: 30px;
+}
+
+.btn-edit {
+  background-color: #a23b4f;
+  border: 1px solid #a23b4f;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  color : white;
+}
+
+.btn-edit:hover {
+  opacity: 1;
+  text-decoration: none;
+  color : white;
+}
+
