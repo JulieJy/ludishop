@@ -3,25 +3,34 @@
   margin-top: 10px;
   border-radius : 10px;
   padding-bottom: 20px;
-  box-shadow: 2px 2px 5px 0px #656565;
+  padding:20px;
+}
+.game-head{
+  display:flex;
+ justify-content: space-between;
 }
 
+.game-title{
+
+}
 .game-picture {
-  border-radius : 10px;
-  box-shadow : 1px 1px 1px grey;
-  margin-left: 10px;
+  width:70%;
+  margin:0 auto;
 }
 
 .game-price {
-  color : #39193f;
-  font-weight : bold;
-  margin : 10px;
+  color : #000000;
   font-size: 30px;
-  margin-bottom: 5px;
+  text-align: right;
+  margin-top:20px;
+  background-color: #fad878;
+  border-radius:50px;
+  padding:4px 20px;
+  font-style: italic;
 }
 
 .avatar-bordered {
-  width: 40px;
+  width: 50px;
   border-radius: 50%;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
@@ -33,50 +42,76 @@
   display: flex;
   margin-top: 0 !important;
   padding : 10px;
+  align-content: space-between;
   h2 {
     padding: 0 !important;
     margin: 0 !important;
-    font-size: 20px;
+    font-size: 25px;
+    position: relative;
+    top:20px;
+    left: 10px;
+
   }
 }
-
-.game-user > img {
-  margin-right: 10px;
-}
-
 
 .game-title-desc {
-  margin-left: 10px;
-  h3 {
-    margin: 0px;
-  }
+  margin:20px auto;
+  line-height: 200%;
+
 }
+
+.game-state{
+
+  width:100px;
+  position:absolute;
+  right:40px;
+  background-color:#f6a362;
+  padding:4px 20px;
+  font-size: 20px;
+  border-radius:50px;
+  text-transform: uppercase;
+  text-align:center;
+}
+
 .btn-buy {
-  background-color: #a23b4f;
-  border: 1px solid #a23b4f;
+  background-color: #fad878;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: 10px;
   font-weight: lighter;
-  opacity: 0.8;
+  opacity: 1;
   transition: opacity 0.3s ease;
-  color : white;
+  color : #000000;
 }
 .btn-buy:hover {
-  opacity: 1;
-  color : white;
+  opacity: 0.8;
+
 }
 
 .btn-delete {
-  background-color: #a23b4f;
-  border: 1px solid #a23b4f;
+  background-color: #FC2431;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: 10px;
   font-weight: lighter;
   opacity: 0.8;
   transition: opacity 0.3s ease;
   color : white;
 }
 .btn-delete:hover {
+  opacity: 1;
+  color : white;
+}
+.btn-edit{
+
+ background-color: #3393FF;
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  color : white;
+
+}
+.btn-edit:hover {
   opacity: 1;
   color : white;
 }
