@@ -39,15 +39,20 @@
           <% end %>
 
           <h5>Bought</h5>
+            <%= @user.bought_games.count %>
             <% unless @user.bought_games == nil %>
               <ul>
                 <% @user.bought_games.each do |bought_game| %>
-                  <li>You have bought <%= bought_game.name %> on the following date <%= Time.now %></li>
+                  <li>
+                    You have bought <%= bought_game.name %> on the following date <%= Time.now %>
+                    <%= link_to "Add Review", new_user_review_path(bought_game.user), class: "btn btn-primary" %>
+                  </li>
                 <% end %>
               </ul>
             <% end %>
-
-      <%= link_to "Add Review", new_user_review_path(@user), class: "btn btn-primary" %>
+          <br>
+          <br>
+          <br>
       <%= link_to "Edit Profile", edit_profile_path(@user), class: "btn btn-primary" %>
     </div>
   </div>
