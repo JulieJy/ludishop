@@ -1,66 +1,64 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-8 col-md-6">
+    <div class="col-md-8 col-md-offset-2">
 
-      <h3>Profile</h3>
-      <table class="table table-bordered">
-        <img src="<%= @user.photo %>" alt="profile-picture" class="avatar">
-        <tbody>
-          <thead>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Address</th>
-            <th>Email</th>
-            <th>Phone Number</th>
-            <th>Reviews</th>
-          </thead>
-            <tr>
-              <td><%= @user.first_name %></td>
-              <td><%= @user.last_name %></td>
-              <td><%= @user.address %></td>
-              <td><%= @user.email %></td>
-              <td><%= @user.phone_number %></td>
-              <% @user.reviews.each do |review| %>
-                <td><%= review.content %></td>
-                <td><%= review.rate %></td>
-              <% end %>
-            </tr>
-        </tbody>
-      </table>
+      <div id="user_description" class="">
+        <div id="profil_pic">
+          <img src="<%= @user.photo %>" alt="profile-picture" class="avatar">
+        </div>
+        <h3 id="name"><%= "#{@user.first_name} #{@user.last_name}" %></h3>
+        <p id="address" class="italic">A/ <%= @user.address %></p>
+        <p id="email" class="italic">M/ <%= @user.email %></p>
+        <p id="phone_number" class="italic">P/ <%= @user.phone_number %></p>
+      </div>
 
-      <h4>Your games to be sold</h4>
-      <% @user.games.where(buyer_id: nil).each do |game| %>
-        <ul>
-          <li> <%= game.name %> (<%= game.price.to_i %>€) </li>
-        </ul>
-      <% end %>
+      <div id="my_reviews" class="flex" >
+        <h4 class="text-uppercase">My Reviews</h4>
+        <% @user.reviews.each do |review| %>
+          <ul>
+            <li><%= review.content %> (<%= review.rate %>/5)</li>
+          </ul>
+        <% end %>
+      </div>
 
-      <h4>Transactions</h4>
-        <h5>Sold</h5>
-          <% unless @user.sold_games == nil %>
-            <ul>
-              <% @user.sold_games.each do |sold_game| %>
-                <li>You have sold <%= sold_game.name %> on the following date <%= Time.now %></li>
-              <% end %>
-            </ul>
-          <% end %>
+      <div id="games_on_sale">
+        <h4 class="text-uppercase">Your game(s) on sale</h4>
+        <% @user.games.where(buyer_id: nil).each do |game| %>
+          <ul>
+            <li> <%= game.name %> (<%= game.price.to_i %>€) </li>
+          </ul>
+        <% end %>
+      </div>
 
-          <h5>Bought</h5>
-            <%= @user.bought_games.count %>
-            <% unless @user.bought_games == nil %>
+      <div id="transactions">
+        <h4 class="text-uppercase">Transactions</h4>
+          <h5 class="btn-price-card">Sold</h5>
+            <% unless @user.sold_games == nil %>
               <ul>
-                <% @user.bought_games.each do |bought_game| %>
-                  <li>
-                    You have bought <%= bought_game.name %> on the following date <%= Time.now %>
-                    <%= link_to "Add Review", new_user_review_path(bought_game.user), class: "btn btn-primary" %>
-                  </li>
+                <% @user.sold_games.each do |sold_game| %>
+
+                  <li><%= sold_game.name %> <span style="color: #EDEDED; font-weight: lighter">|</span> <%= Time.now.strftime("%d/%m/%Y") %></li>
                 <% end %>
               </ul>
             <% end %>
-          <br>
-          <br>
-          <br>
-      <%= link_to "Edit Profile", edit_profile_path(@user), class: "btn btn-primary" %>
+
+          <h5 class="btn-price-card">Bought</h5>
+          <% unless @user.bought_games == nil %>
+            <ul>
+              <% @user.bought_games.each do |bought_game| %>
+              <div class="test">
+                <li>
+                  <span class="review_btn"><%= link_to "Add Review", new_user_review_path(bought_game.user), class: "btn-review" %></span>
+                  <%= bought_game.name %> <span style="color: #EDEDED; font-weight: lighter">|</span> <%= Time.now.strftime("%d/%m/%Y") %>
+                </li>
+              </div>
+              <% end %>
+            </ul>
+          <% end %>
+      </div>
+      <div id="btn-range">
+        <%= link_to "Edit Profile", edit_profile_path(@user), class: "btn-edit" %>
+      </div>
     </div>
   </div>
 </div>

@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
     @review.receiver = @user
 
     if @review.save!
-      redirect_to profile_path(@user)
+      redirect_to profile_path(current_user)
     else
       render :new
     end
