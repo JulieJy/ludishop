@@ -1,2 +1,18 @@
+
+
+
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div id="games">
+        <% @games.each do |game| %>
+          <h4><%= game.title %></h4>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
