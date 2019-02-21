@@ -17,7 +17,7 @@ class GamesController < ApplicationController
   end
 
   def index
-    @games = Game.all
+    @games = Game.all.where(buyer_id: nil)
   end
 
   def show
@@ -29,12 +29,13 @@ class GamesController < ApplicationController
   end
 
   def payment
-
   end
 
   def confirmed
     @user = User.find(@game.user_id)
-
+    @game.buyer_id = current_user.id
+    @game.transaction_date = Time.now
+    @game.save!
   end
 
   private

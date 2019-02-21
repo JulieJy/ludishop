@@ -28,6 +28,13 @@
         </tbody>
       </table>
 
+      <h4>Your games to be sold</h4>
+      <% @user.games.where(buyer_id: nil).each do |game| %>
+        <ul>
+          <li> <%= game.name %> (<%= game.price.to_i %>€) </li>
+        </ul>
+      <% end %>
+
       <h4>Transactions</h4>
         <h5>Sold</h5>
           <% unless @user.sold_games == nil %>
@@ -39,15 +46,20 @@
           <% end %>
 
           <h5>Bought</h5>
+            <%= @user.bought_games.count %>
             <% unless @user.bought_games == nil %>
               <ul>
                 <% @user.bought_games.each do |bought_game| %>
-                  <li>You have bought <%= bought_game.name %> on the following date <%= Time.now %></li>
+                  <li>
+                    You have bought <%= bought_game.name %> on the following date <%= Time.now %>
+                    <%= link_to "Add Review", new_user_review_path(bought_game.user), class: "btn btn-primary" %>
+                  </li>
                 <% end %>
               </ul>
             <% end %>
-
-      <%= link_to "Add Review", new_user_review_path(@user), class: "btn btn-primary" %>
+          <br>
+          <br>
+          <br>
       <%= link_to "Edit Profile", edit_profile_path(@user), class: "btn btn-primary" %>
     </div>
   </div>
