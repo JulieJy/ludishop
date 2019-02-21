@@ -17,8 +17,7 @@ class GamesController < ApplicationController
   end
 
   def index
-    @games = Game.all
-    @games_to_sell = @games.select { |game| game.buyer_id = '' }
+    @games = Game.all.where(buyer_id: nil)
   end
 
   def show
