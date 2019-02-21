@@ -1,0 +1,101 @@
+
+.card-trip {
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 400px;
+  width : 254px;
+  margin: 20px auto;
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
+  z-index: 10;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  height : auto;
+  text-overflow: ellipsis;
+  z-index: 10;
+
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  border-top-left-radius: 300px 50px;
+  border-top-right-radius: 300px 50px;
+  z-index: 1;
+  background-color: white;
+  top: -13px;
+
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 41%;
+  top: -32px;
+  width: 56px;
+  margin: auto;
+  z-index: 2;
+}
+
+// .container {
+//   display: flex;
+//   justify-content : space-around;
+//   align-items : center;
+// }
+// .ellipsis{
+//     width: 100px;
+//   }
+
+.card-text {
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-link {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.card-trip-pricing {
+ position: absolute;
+  right: 4%;
+  top: -175px;
+  width: 56px;
+  margin: auto;
+  z-index: 2;
+}
+
+.btn-price-card {
+  background-color: #ffffff;
+  // border: 1px solid #a23b4f;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-weight: lighter;
+}
