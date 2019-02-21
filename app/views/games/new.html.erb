@@ -8,9 +8,8 @@
         <%= f.input :name, class: 'bg-secondary' %>
         <%= f.input :description %>
         <%= f.input :price, input_html: { min: '0', step: 'any' }  %>
-        <%= f.input :state, as: :radio_buttons , collection: User::STATES, wrapper: :vertical_collection_inline %>
+        <%= f.input :state, collection: User::STATES, prompt: :translate %>
         <%= f.input :photo %>
-
 
         <%= f.button :submit, class: 'btn btn-primary' %>
       <% end %>

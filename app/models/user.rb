@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  STATES =['NEW','USED','VERY USED']
+  STATES =['New','Used','Very used']
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
