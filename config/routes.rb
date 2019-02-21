@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'movies/index'
+  get 'users/index'
   get "/my_profile", to: 'profiles#my_profile'
   resources :profiles, only: [:show, :edit, :update]
   resources :reviews, only: [:index]

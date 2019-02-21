@@ -15,7 +15,7 @@ user1 = User.new(
   first_name: "John",
   last_name: "Lennon",
   email: "john@lennon.com",
-  address: "New York City",
+  address: "20 rue des capucins, Lyon",
   phone_number:"555-345-322",
   password: "secret")
 
@@ -26,7 +26,7 @@ user2 = User.new(
   first_name: "Matthew",
   last_name: "Bellamy",
   email: "matthew@bellamy.com",
-  address: "New York City",
+  address: "Martin de los heros 59, Madrid",
   phone_number:"555-345-322",
   password: "secret")
 
