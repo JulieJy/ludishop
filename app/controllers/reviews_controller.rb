@@ -12,9 +12,10 @@ class ReviewsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @review = Review.new(review_params)
-    @review.user = @user
+    @review.user = current_user
+    @review.receiver = @user
 
-    if @review.save
+    if @review.save!
       redirect_to profile_path(@user)
     else
       render :new

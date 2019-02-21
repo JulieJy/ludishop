@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Review.destroy_all
 p 'I destroy all games'
 Game.destroy_all
 p 'I destroy all users'
@@ -40,7 +41,8 @@ game1 = Game.new(
   description: "Les Aventuriers du Rail - Europe  est le deuxième volume de la célèbre série des Aventuriers du Rail dont la version de base se joue sur une carte des USA. Plus qu'une nouvelle carte, cette version incorpore de nouvelles routes (tunnels et ferries), et de nouvelles pièces de jeu, les gares.",
   state: "used",
   price: 11,
-  picture: "https://www.espritjeu.com/upload/image/les-aventuriers-du-rail---europe-p-image-59803-grande.jpg")
+  picture: "https://www.espritjeu.com/upload/image/les-aventuriers-du-rail---europe-p-image-59803-grande.jpg",
+  buyer_id: user2.id)
 
 game1.remote_photo_url = "https://www.espritjeu.com/upload/image/les-aventuriers-du-rail---europe-p-image-59803-grande.jpg"
 game1.save!
@@ -63,7 +65,8 @@ game3 = Game.new(
   description: "Jouez les espions et retrouvez vos alliés avec des Noms de Code! Codenames est un jeu d'expression, d'association d'idées et de déduction qui se joue en équipe.",
   state: "new",
   price: 13,
-  picture: "https://static.fnac-static.com/multimedia/Images/FR/NR/c1/b8/78/7911617/1540-1/tsp20160826112220/Codenames-Iello.jpg")
+  picture: "https://static.fnac-static.com/multimedia/Images/FR/NR/c1/b8/78/7911617/1540-1/tsp20160826112220/Codenames-Iello.jpg",
+  buyer_id: user2.id)
 
 game3.remote_photo_url = "https://static.fnac-static.com/multimedia/Images/FR/NR/c1/b8/78/7911617/1540-1/tsp20160826112220/Codenames-Iello.jpg"
 game3.save!
@@ -74,7 +77,8 @@ game4 = Game.new(
   description: "Évalue tes connaissances de 1 à 10 et réponds aux questions !",
   state: "new",
   price: 13,
-  picture: "https://cdn3.philibertnet.com/419835-large_default/ttmc-tu-te-mets-combien-.jpg")
+  picture: "https://cdn3.philibertnet.com/419835-large_default/ttmc-tu-te-mets-combien-.jpg",
+  buyer_id: user1.id)
 
 game4.remote_photo_url = "https://cdn3.philibertnet.com/419835-large_default/ttmc-tu-te-mets-combien-.jpg"
 game4.save!
@@ -88,7 +92,8 @@ game5 = Game.new(
    des mages, des amazones, des géants, des orcs et même des humains !",
   state: "new",
   price: 15,
-   picture: "https://cdn2.philibertnet.com/385636-large_default/small-world.jpg")
+  picture: "https://cdn2.philibertnet.com/385636-large_default/small-world.jpg",
+  buyer_id: user1.id)
 
 game5.remote_photo_url = "https://cdn2.philibertnet.com/385636-large_default/small-world.jpg"
 game5.save!
@@ -100,7 +105,8 @@ game6 = Game.new(
     de cartes stratégique !",
   state: "used",
   price: 16,
-  picture: "https://www.espritjeu.com/upload/image/dominion-p-image-56141-grande.jpg")
+  picture: "https://www.espritjeu.com/upload/image/dominion-p-image-56141-grande.jpg",
+  buyer_id: user1.id)
 
 game6.remote_photo_url = "https://www.espritjeu.com/upload/image/dominion-p-image-56141-grande.jpg"
 game6.save!
