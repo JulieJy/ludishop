@@ -10,7 +10,7 @@
     <!-- Title of the game -->
          <div class="game-head">
             <h3 class="game-title"><%= @game.name %></h3>
-            <p class="game-price"><%= @game.price %>0€</p>
+            <p class="game-price"><%= number_with_precision(@game.price, :precision => 2) %>€</p>
         </div>
         <div class="">
           <p class="game-state"><%= @game.state %></p>

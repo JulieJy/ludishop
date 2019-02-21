@@ -115,7 +115,7 @@ game7 = Game.new(
   user: user1,
    name:"Unlock 2!",
    description: "Unlock! 2 Mystery Adventures est un jeu de cartes coopératif inspiré des Escape Room.",
-   price: 17,
+   price: 17.00,
    state: "used",
    picture: "https://www.espritjeu.com/upload/image/unlock--2---mystery-adventures-p-image-62011-grande.jpg")
 
