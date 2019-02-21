@@ -29,13 +29,13 @@ class GamesController < ApplicationController
   end
 
   def payment
-
   end
 
   def confirmed
     @user = User.find(@game.user_id)
-    @game.buyer_id = current_user
+    @game.buyer_id = current_user.id
     @game.transaction_date = Time.now
+    @game.save!
   end
 
   private
