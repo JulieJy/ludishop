@@ -27,7 +27,7 @@ user2 = User.new(
   first_name: "Matthew",
   last_name: "Bellamy",
   email: "matthew@bellamy.com",
-  address: "Martin de los heros 59, Madrid",
+  address: "Madrid",
   phone_number:"555-345-322",
   password: "secret")
 
@@ -54,7 +54,7 @@ game2 = Game.new(
   state: "used",
   price: 12,
   picture: "https://cdn3.philibertnet.com/310399-large_default/7-wonders-vf.jpg",
-  buyer_id: user2.id)
+  )
 
 game2.remote_photo_url = "https://cdn3.philibertnet.com/310399-large_default/7-wonders-vf.jpg"
 game2.save!
@@ -66,7 +66,7 @@ game3 = Game.new(
   state: "new",
   price: 13,
   picture: "https://static.fnac-static.com/multimedia/Images/FR/NR/c1/b8/78/7911617/1540-1/tsp20160826112220/Codenames-Iello.jpg",
-  buyer_id: user2.id)
+  )
 
 game3.remote_photo_url = "https://static.fnac-static.com/multimedia/Images/FR/NR/c1/b8/78/7911617/1540-1/tsp20160826112220/Codenames-Iello.jpg"
 game3.save!
@@ -78,7 +78,7 @@ game4 = Game.new(
   state: "new",
   price: 13,
   picture: "https://cdn3.philibertnet.com/419835-large_default/ttmc-tu-te-mets-combien-.jpg",
-  buyer_id: user1.id)
+  )
 
 game4.remote_photo_url = "https://cdn3.philibertnet.com/419835-large_default/ttmc-tu-te-mets-combien-.jpg"
 game4.save!
@@ -93,7 +93,7 @@ game5 = Game.new(
   state: "new",
   price: 15,
   picture: "https://cdn2.philibertnet.com/385636-large_default/small-world.jpg",
-  buyer_id: user1.id)
+  )
 
 game5.remote_photo_url = "https://cdn2.philibertnet.com/385636-large_default/small-world.jpg"
 game5.save!
@@ -106,7 +106,7 @@ game6 = Game.new(
   state: "used",
   price: 16,
   picture: "https://www.espritjeu.com/upload/image/dominion-p-image-56141-grande.jpg",
-  buyer_id: user1.id)
+  )
 
 game6.remote_photo_url = "https://www.espritjeu.com/upload/image/dominion-p-image-56141-grande.jpg"
 game6.save!
@@ -121,5 +121,16 @@ game7 = Game.new(
 
 game7.remote_photo_url = "https://www.espritjeu.com/upload/image/unlock--2---mystery-adventures-p-image-62011-grande.jpg"
 game7.save!
+
+game8 = Game.new(
+  user: user1,
+   name:"Unlock 2 repeat!",
+   description: "Unlock! 2 Mystery Adventures est un jeu de cartes coopératif inspiré des Escape Room.",
+   price: 17,
+   state: "used",
+   picture: "https://www.espritjeu.com/upload/image/unlock--2---mystery-adventures-p-image-62011-grande.jpg")
+
+game8.remote_photo_url = "https://www.espritjeu.com/upload/image/unlock--2---mystery-adventures-p-image-62011-grande.jpg"
+game8.save!
 p 'I create 7 new games'
 p 'Finished !'

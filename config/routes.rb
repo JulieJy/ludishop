@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   get "/game/:id/payment", to: "games#payment", as: "game_payment"
   get "/game/:id/payment/confirmed", to: "games#confirmed", as: "game_payment_confirmed"
 
-  root to: 'games#index'
+  root to: 'pages#home'
   devise_for :users
 end

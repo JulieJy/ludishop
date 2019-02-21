@@ -1,5 +1,17 @@
 <div class="container">
   <div class="row">
+    <div class="">
+         <div class="search-bar">
+          <%= form_tag games_path, class: 'form-search', method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+         class: "form-control",
+         placeholder: "Find a game"
+         %>
+       <% end %>
+      </div>
+  </div>
+
     <% @games.each do |game| %>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card-trip">
