@@ -28,6 +28,13 @@
         </tbody>
       </table>
 
+      <h4>Your games to be sold</h4>
+      <% @user.games.where(buyer_id: nil).each do |game| %>
+        <ul>
+          <li> <%= game.name %> (<%= game.price.to_i %>€) </li>
+        </ul>
+      <% end %>
+
       <h4>Transactions</h4>
         <h5>Sold</h5>
           <% unless @user.sold_games == nil %>
