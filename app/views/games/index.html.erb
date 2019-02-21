@@ -13,7 +13,9 @@
               <br>
               <p><%=game.description%></p>
             </div>
-            <h2 class="card-trip-pricing btn-price-card"><i><%=game.price%>€</i></h2>
+            <i><h2 class="card-trip-pricing btn-price-card">
+              <%= number_with_precision(game.price, :precision => 2) %>
+            €</h2></i>
             <%= link_to "", game_path(game), class: 'card-link'%>
             <img src="<%=game.user.photo%>" class="card-trip-user avatar-bordered"/>
           </div>
