@@ -39,7 +39,7 @@ class GamesController < ApplicationController
   def confirmed
     @user = User.find(@game.user_id)
     @game.buyer_id = current_user.id
-    @game.transaction_date = Time.now
+    @game.transaction_date = Time.now.strftime("%d/%m/%Y")
     @game.save!
   end
 

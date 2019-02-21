@@ -37,7 +37,7 @@
               <ul>
                 <% @user.sold_games.each do |sold_game| %>
 
-                  <li><%= sold_game.name %> <span style="color: #EDEDED; font-weight: lighter">|</span> <%= Time.now.strftime("%d/%m/%Y") %></li>
+                  <li><%= sold_game.name %> <span style="color: #EDEDED; font-weight: lighter">|</span> <%= sold_game.transaction_date %></li>
                 <% end %>
               </ul>
             <% end %>
@@ -49,7 +49,7 @@
               <div class="test">
                 <li>
                   <span class="review_btn"><%= link_to "Add Review", new_user_review_path(bought_game.user), class: "btn-review" %></span>
-                  <%= bought_game.name %> <span style="color: #EDEDED; font-weight: lighter">|</span> <%= Time.now.strftime("%d/%m/%Y") %>
+                  <%= bought_game.name %> <span style="color: #EDEDED; font-weight: lighter">|</span> <%= bought_game.transaction_date %>
                 </li>
               </div>
               <% end %>
