@@ -1,31 +1,41 @@
-<div class="container game-show">
-  <div class="game-detail">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+
+       <div class="game-show">
+
+             <div class="game-detail">
 
     <!-- Title of the game -->
-      <h3 ><%= @game.name %></h3>
-
-
+         <div class="game-head">
+            <h3 class="game-title"><%= @game.name %></h3>
+            <p class="game-price"><%= @game.price %>0€</p>
+        </div>
+        <div class="">
+          <p class="game-state"><%= @game.state %></p>
+          </div>
     <!-- picture of the game -->
-    <img class="game-picture" src="<%= @game.photo %>" alt="">
+       <div class="text-center">
+            <img class="game-picture" src="<%= @game.photo %>" alt="">
+        </div>
 
     <!-- Informations about seller of game -->
-    <div class="container game-user">
-      <img src="<%= @game.user.photo %>" class="avatar-bordered" alt="">
-      <h2><%= @game.user.first_name %> <%= @game.user.last_name %></h2>
-    </div>
 
+           <div class="game-user">
+               <img src="<%= @game.user.photo %>" class="avatar-bordered" alt="">
+               <h2><%= @game.user.first_name %> <%= @game.user.last_name %></h2>
+           </div>
     <!-- price of the game -->
-    <p class="game-price"><%= @game.price %>0€</p>
 
-    <div class="game-title-desc">
+            <div class="game-title-desc">
     <!-- description of the game -->
-      <p><%= @game.description %></p>
-    </div>
-  </div>
+             <p><%= @game.description %></p>
+            </div>
+         </div>
 
 
   <!-- Buttons -->
-
   <!-- if not logged in -->
   <% if current_user == nil %>
     <a class="btn btn-ghost btn-buy" href="<%=game_payment_path%>">Buy this game</a>
@@ -36,10 +46,13 @@
 
   <% elsif @game.user.id == current_user.id %>
     <a class="btn btn-ghost btn-delete" data-method="delete" href="<%=game_path%>">Delete this game</a>
+     <a class="btn btn-ghost btn-edit" data-method="delete" href="<%=game_path%>">Edit this game</a>
 
   <!-- if not -->
   <% else %>
-    <a class="btn btn-ghost btn-buy" href="<%=game_payment_path%>">Buy this game</a>
+    <a class="btn btn-ghost btn-edit" href="<%=game_payment_path%>">Buy this game</a>
   <% end %>
 </div>
-
+</div>
+</div>
+</div>
