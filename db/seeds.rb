@@ -26,7 +26,7 @@ user2 = User.new(
   first_name: "Matthew",
   last_name: "Bellamy",
   email: "matthew@bellamy.com",
-  address: "Martin de los heros 59, Madrid",
+  address: "Madrid",
   phone_number:"555-345-322",
   password: "secret")
 
