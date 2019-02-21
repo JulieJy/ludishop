@@ -34,7 +34,8 @@ class GamesController < ApplicationController
 
   def confirmed
     @user = User.find(@game.user_id)
-
+    @game.buyer_id = current_user
+    @game.transaction_date = Time.now
   end
 
   private
