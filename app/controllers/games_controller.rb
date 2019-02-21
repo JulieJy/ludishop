@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :find_game, only: [:destroy, :update, :edit, :show]
+  before_action :find_game, only: [:destroy, :update, :edit, :show, :payment, :confirmed]
 
   def new
     @game = Game.new
@@ -26,6 +26,15 @@ class GamesController < ApplicationController
   def destroy
     @game.destroy
     redirect_to games_path
+  end
+
+  def payment
+
+  end
+
+  def confirmed
+    @user = User.find(@game.user_id)
+
   end
 
   private

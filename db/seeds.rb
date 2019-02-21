@@ -49,7 +49,8 @@ game2 = Game.new(
   name:"7 wonders",
   description: "L'Antiquité et ses merveilles. Revivez l'épopée des grandes constructions avec ce jeu de cartes et de stratégie !",
   price: 12,
-  picture: "https://cdn3.philibertnet.com/310399-large_default/7-wonders-vf.jpg")
+  picture: "https://cdn3.philibertnet.com/310399-large_default/7-wonders-vf.jpg",
+  buyer_id: user2.id)
 
 game2.remote_photo_url = "https://cdn3.philibertnet.com/310399-large_default/7-wonders-vf.jpg"
 game2.save!

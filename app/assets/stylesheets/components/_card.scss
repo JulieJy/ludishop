@@ -1,3 +1,7 @@
+// *:before, *:after {
+//     box-sizing: border-box;
+// }
+
 
 .card-trip {
   border-radius: 10px;
@@ -5,10 +9,26 @@
   background: white;
   position: relative;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 400px;
+  // height: 400px;
   width : 254px;
   margin: 20px auto;
+  border: 3px solid #fad878;
 }
+
+// .card-trip-click {
+//   opacity: 0;
+//   border-radius: 10px;
+//   overflow: hidden;
+//   background: white;
+//   position: relative;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   height: 400px;
+//   width : 254px;
+//   margin: 20px auto;
+// }
+// .card-user-picture {
+//   // border: white 5px solid;
+// }
 
 .card-trip > img {
   height: 200px;
@@ -26,12 +46,20 @@
 }
 
 .card-trip p {
+  -webkit-box-orient: vertical;
   font-size: 12px;
   opacity: .7;
   margin: 0;
   height : auto;
   text-overflow: ellipsis;
   z-index: 10;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+
 
 }
 
@@ -57,6 +85,8 @@
   width: 56px;
   margin: auto;
   z-index: 2;
+  border: white 3px solid;
+  box-shadow: none;
 }
 
 // .container {
@@ -69,10 +99,13 @@
 //   }
 
 .card-text {
+  // background-color: green;
   text-align: center;
-  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  height: 150px;
+  // width: 100px;
+  // position: relative;
 }
 
 .card-link {
@@ -88,12 +121,12 @@
   right: 4%;
   top: -175px;
   width: 56px;
-  margin: auto;
-  z-index: 2;
+  // margin: auto;
+  // z-index: 2;
 }
 
 .btn-price-card {
-  background-color: #ffffff;
+  background-color: #fad878;
   // border: 1px solid #a23b4f;
   padding: 4px 10px;
   border-radius: 50px;
