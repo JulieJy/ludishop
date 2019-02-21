@@ -23,6 +23,16 @@ class GamesController < ApplicationController
     else
       @games = Game.all
     end
+
+    @users = User.where.not(latitude: nil, longitude: nil)
+
+    @markers = @users.map do |user|
+      {
+        lng: user.longitude,
+        lat: user.latitude,
+        image_url: helpers.asset_url('https://uxwing.com/wp-content/themes/uxwing/download/24-sport/chess-knight.png')
+      }
+     end
   end
 
   def show
