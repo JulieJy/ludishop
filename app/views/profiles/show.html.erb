@@ -48,7 +48,7 @@
               <% @user.bought_games.each do |bought_game| %>
               <div class="test">
                 <li>
-                  <span class="review_btn"><%= link_to "Add Review", new_user_review_path(bought_game.user), class: "btn-review" %></span>
+                  <span class="review_btn"><%= link_to "Add Review", new_user_review_path(bought_game.user), class: "btn-review btn_all" %></span>
                   <%= bought_game.name %> <span style="color: #EDEDED; font-weight: lighter">|</span> <%= bought_game.transaction_date %>
                 </li>
               </div>
@@ -57,7 +57,7 @@
           <% end %>
       </div>
       <div id="btn-range">
-        <%= link_to "Edit Profile", edit_profile_path(@user), class: "btn-edit" %>
+        <%= link_to "Edit Profile", edit_profile_path(@user), class: "btn_all" %>
       </div>
     </div>
   </div>
