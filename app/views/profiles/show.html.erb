@@ -25,36 +25,47 @@
         <h4 class="text-uppercase">Your game(s) on sale</h4>
         <% @user.games.where(buyer_id: nil).each do |game| %>
           <ul>
-            <li> <%= game.name %> (<%= game.price.to_i %>€) </li>
+            <li> <%= game.name %> (<%= number_with_precision(game.price, :precision => 2) %>€) </li>
           </ul>
         <% end %>
       </div>
 
       <div id="transactions">
         <h4 class="text-uppercase">Transactions</h4>
-          <h5 class="btn-price-card">Sold</h5>
-            <% unless @user.sold_games == nil %>
+        <div class="tab-container">
+          <ul class="tab" role="tablist">
+            <li role="presentation" class="active"><a href="#sold" aria-controls="sold" role="tab" data-toggle="tab">Sold</a></li>
+            <li role="presentation"><a href="#bought" aria-controls="bought" role="tab" data-toggle="tab">Bought</a></li>
+          </ul>
+        </div>
+
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="sold">
+            <% unless @user.sold_games.nil? %>
               <ul>
                 <% @user.sold_games.each do |sold_game| %>
 
-                  <li><%= sold_game.name %> <span style="color: #EDEDED; font-weight: lighter">|</span> <%= sold_game.transaction_date %></li>
+                  <li class="game"><%= sold_game.name %> <span style="color: #EDEDED; font-weight: lighter">|</span> <%= sold_game.transaction_date %></li>
                 <% end %>
               </ul>
             <% end %>
+            </div>
 
-          <h5 class="btn-price-card">Bought</h5>
-          <% unless @user.bought_games == nil %>
-            <ul>
-              <% @user.bought_games.each do |bought_game| %>
-              <div class="test">
-                <li>
-                  <span class="review_btn"><%= link_to "Add Review", new_user_review_path(bought_game.user), class: "btn-review" %></span>
-                  <%= bought_game.name %> <span style="color: #EDEDED; font-weight: lighter">|</span> <%= bought_game.transaction_date %>
-                </li>
-              </div>
+            <div role="tabpanel" class="tab-pane" id="bought">
+              <% unless @user.bought_games.nil? %>
+                <ul>
+                  <% @user.bought_games.each do |bought_game| %>
+                  <div class="test">
+                    <li class="game">
+                      <span class="review_btn"><%= link_to "Add Review", new_user_review_path(bought_game.user), class: "btn-review" %></span>
+                      <%= bought_game.name %> <span style="color: #EDEDED; font-weight: lighter">|</span> <%= bought_game.transaction_date %>
+                    </li>
+                  </div>
+                  <% end %>
+                </ul>
               <% end %>
-            </ul>
-          <% end %>
+            </div>
+          </div>
       </div>
       <div id="btn-range">
         <%= link_to "Edit Profile", edit_profile_path(@user), class: "btn-edit" %>
