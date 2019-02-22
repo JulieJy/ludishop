@@ -8,15 +8,15 @@
   overflow: hidden;
   background: white;
   position: relative;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   // height: 400px;
   width : 254px;
   margin: 20px auto;
   border: 3px solid #fad878;
+  box-shadow: none;
   opacity : 0.95;
   &:hover {
     opacity : 1;
-    box-shadow: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
 }
 

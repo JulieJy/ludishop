@@ -1,7 +1,7 @@
-<div class="container cont-bordered">
+<div class="container cont-bordered-devise">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <h2>Log in</h2>
+    <div class="col-sm-10 col-sm-offset-1">
+      <h2 style="margin: 10px 70px;">Log in</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
@@ -16,7 +16,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Log in", class: "btn_all" %>
+          <%= f.button :submit, "Log in", class: "btn_devise" %>
         </div>
       <% end %>
 
