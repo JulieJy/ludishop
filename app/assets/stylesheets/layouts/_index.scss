@@ -2,10 +2,64 @@
 // Examples:
 // @import "dashboard";
 // @import "profile";
-// @import "map";
-
 @import 'show';
+// @import "map";
+a {
+  text-decoration: none !important;
+  color: white;
+  &:hover {
+    color: white;
+  }
+
+
+}
 
 .container {
   margin-top: 70px;
+}
+
+.btn_all {
+  border-radius: 28px;
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  padding: 0.5em 2.5em 0.6em;
+  border: none;
+  border-color: none;
+  background-color: #f05d59;
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+  &:hover {
+    box-shadow: 1px 8px 59px 9px rgba(57,25,63,0.19);
+    transition: box-shadow 0.5s ease;
+    color: white;
+    opacity: 1;
+
+  }
+}
+
+.btn-nav {
+  color: #f05d59 !important;
+  border-radius: 28px;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  padding-top: 2px !important;
+  border: 1px solid #f05d59;
+  &:hover {
+    background-color: #f05d59;
+    transition: background-color 0.5s ease;
+    color: #fcf4d8 !important;
+  }
+}
+#btn_home {
+  margin-right: 40px;
+
+}
+.home_div_btn {
+  padding-left: 60px;
 }

@@ -11,7 +11,7 @@ Game.destroy_all
 p 'I destroy all users'
 User.destroy_all
 
-p 'I create 2 users'
+p 'I create 4 users'
 user1 = User.new(
   first_name: "John",
   last_name: "Lennon",
@@ -26,13 +26,35 @@ user1.save!
 user2 = User.new(
   first_name: "Matthew",
   last_name: "Bellamy",
-  email: "matthew@bellamy.com",
-  address: "Madrid",
+  email: "pedro@pedro.com",
+  address: "Grenoble",
   phone_number:"555-345-322",
   password: "secret")
 
 user2.remote_photo_url = "https://thispersondoesnotexist.com/"
 user2.save!
+
+user3 = User.new(
+  first_name: "Matthew",
+  last_name: "Bellamy",
+  email: "quentin@quentin.com",
+  address: "Montpellier",
+  phone_number:"555-345-322",
+  password: "secret")
+
+user3.remote_photo_url = "https://thispersondoesnotexist.com/"
+user3.save!
+
+user4 = User.new(
+  first_name: "Matthew",
+  last_name: "Bellamy",
+  email: "matthew@bellamy.com",
+  address: "Nimes",
+  phone_number:"555-345-322",
+  password: "secret")
+
+user4.remote_photo_url = "https://thispersondoesnotexist.com/"
+user4.save!
 
 p 'creating games...'
 game1 = Game.new(

@@ -17,12 +17,21 @@ class GamesController < ApplicationController
   end
 
   def index
-    @games = Game.all.where(buyer_id: nil)
     if params[:query].present?
       @games = Game.where("name ILIKE ?", "%#{params[:query]}%")
     else
-      @games = Game.all
+      @games = Game.all.where(buyer_id: nil)
     end
+
+    @users = User.where.not(latitude: nil, longitude: nil)
+
+    @markers = @users.map do |user|
+      {
+        lng: user.longitude,
+        lat: user.latitude,
+        image_url: helpers.asset_url('https://uxwing.com/wp-content/themes/uxwing/download/24-sport/chess-knight.png')
+      }
+     end
   end
 
   def show

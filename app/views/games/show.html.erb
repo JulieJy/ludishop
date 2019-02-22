@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container cont-bordered">
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -38,19 +38,19 @@
   <!-- Buttons -->
   <!-- if not logged in -->
   <% if current_user == nil %>
-    <a class="btn btn-ghost btn-buy" href="<%=game_payment_path%>">Buy this game</a>
+    <a class="btn btn_all" href="<%=game_payment_path%>">Buy this game</a>
   <!-- if game has been bought -->
   <% elsif @game.buyer_id != nil %>
-    <a class="btn btn-ghost" href="#">This game is sold !</a>
+    <a class="btn btn_all" href="#">This game is sold !</a>
   <!-- if you are the seller of the game -->
 
   <% elsif @game.user.id == current_user.id %>
-    <a class="btn btn-ghost btn-delete" data-method="delete" href="<%=game_path%>">Delete this game</a>
-     <a class="btn btn-ghost btn-edit" data-method="delete" href="<%=game_path%>">Edit this game</a>
+    <a class="btn btn_all" data-method="delete" href="<%=game_path%>">Delete this game</a>
+     <a class="btn btn_all" data-method="delete" href="<%=game_path%>">Edit this game</a>
 
   <!-- if not -->
   <% else %>
-    <a class="btn btn-ghost btn-edit" href="<%=game_payment_path%>">Buy this game</a>
+    <a class="btn btn_all" href="<%=game_payment_path%>">Buy this game</a>
   <% end %>
 </div>
 </div>
