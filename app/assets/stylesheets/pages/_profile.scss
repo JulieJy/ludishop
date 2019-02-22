@@ -33,7 +33,7 @@ ul {
   padding: 0;
 }
 
-li {
+li.game {
   border-bottom: 1px solid #EDEDED;
   padding-bottom: 3px;
   padding-top: 3px;
@@ -119,5 +119,43 @@ li {
   opacity: 1;
   text-decoration: none;
   color : white;
+}
+
+.tab-container {
+  width: 80%;
+}
+
+.tab {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab li {
+  padding: 10px 15px;
+}
+
+// .tab li:hover {
+//   background-color: #fcf4d8;
+//   border-radius: 3px;
+// }
+
+// .tab li.active:hover {
+//   background-color: none;
+// }
+
+.tab li.active {
+  border: none;
+  border-bottom: 1px solid white;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: -1px;
+}
+
+.tab li a {
+  text-decoration: none;
+  color: #f05d59;
 }
 
