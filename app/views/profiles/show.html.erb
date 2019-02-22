@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container cont-bordered">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
 
@@ -7,9 +7,9 @@
           <img src="<%= @user.photo %>" alt="profile-picture" class="avatar">
         </div>
         <h3 id="name"><%= "#{@user.first_name} #{@user.last_name}" %></h3>
-        <p id="address" class="italic">A/ <%= @user.address %></p>
-        <p id="email" class="italic">M/ <%= @user.email %></p>
-        <p id="phone_number" class="italic">P/ <%= @user.phone_number %></p>
+        <p id="address" class="italic"><i class="fas fa-map-marker-alt"></i> <%= @user.address %></p>
+        <p id="email" class="italic"><i class="fas fa-at"></i> <%= @user.email %></p>
+        <p id="phone_number" class="italic"><i class="fas fa-phone"></i> <%= @user.phone_number %></p>
       </div>
 
       <div id="my_reviews" class="flex" >
