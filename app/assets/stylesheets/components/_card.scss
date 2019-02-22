@@ -13,6 +13,11 @@
   width : 254px;
   margin: 20px auto;
   border: 3px solid #fad878;
+  opacity : 0.95;
+  &:hover {
+    opacity : 1;
+    box-shadow: none;
+  }
 }
 
 // .card-trip-click {
@@ -121,4 +126,5 @@
   padding: 4px 3px;
   border-radius: 50px;
   font-weight: lighter;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
