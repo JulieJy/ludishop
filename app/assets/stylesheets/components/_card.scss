@@ -13,6 +13,14 @@
   width : 254px;
   margin: 20px auto;
   border: 3px solid #fad878;
+  opacity : 0.95;
+  &:hover {
+    opacity : 1;
+    box-shadow: none;
+  }
+  &:active {
+    background-color : yellow;
+  }
 }
 
 // .card-trip-click {
