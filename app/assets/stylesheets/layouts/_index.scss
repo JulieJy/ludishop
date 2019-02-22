@@ -31,10 +31,12 @@ a {
   background-color: #f05d59;
   color: white;
   text-decoration: none;
+  opacity: 0.9;
   &:hover {
     box-shadow: 1px 8px 59px 9px rgba(57,25,63,0.19);
     transition: box-shadow 0.5s ease;
     color: white;
+    opacity: 1;
 
   }
 }
