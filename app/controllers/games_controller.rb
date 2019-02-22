@@ -17,11 +17,10 @@ class GamesController < ApplicationController
   end
 
   def index
-    @games = Game.all.where(buyer_id: nil)
     if params[:query].present?
       @games = Game.where("name ILIKE ?", "%#{params[:query]}%")
     else
-      @games = Game.all
+      @games = Game.all.where(buyer_id: nil)
     end
   end
 
