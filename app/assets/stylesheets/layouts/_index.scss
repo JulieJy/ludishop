@@ -2,10 +2,48 @@
 // Examples:
 // @import "dashboard";
 // @import "profile";
-// @import "map";
-
 @import 'show';
+// @import "map";
+a {
+  text-decoration: none !important;
+  color: white;
+  &:hover {
+    color: white;
+  }
+
+
+}
 
 .container {
   margin-top: 70px;
+}
+
+.btn_all {
+  border-radius: 28px;
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  padding: 0.5em 2.5em 0.6em;
+  text-align: center;
+  border: none;
+  border-color: none;
+  background-color: #f05d59;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    box-shadow: 1px 8px 59px 9px rgba(57,25,63,0.19);
+    transition: box-shadow 0.5s ease;
+    color: white;
+
+  }
+}
+
+#btn_home {
+  margin-right: 40px;
+
+}
+.home_div_btn {
+  padding-left: 60px;
 }

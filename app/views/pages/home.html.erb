@@ -1,20 +1,16 @@
+<div class="home_html">
 
+  <div class="back">
+    <div class="big_title">
+      <h1 class="home_h1">Your New<br/>Board Games<br/>Marketplace</h1>
+      <p class="home_p">The best place to trade games between players</p>
+    </div>
+    <div class="home_div_btn">
+      <br>
+      <br>
+      <button id="btn_home" class="btn_all"><%= link_to "Sign Up", my_profile_path %></button>
+      <button class="btn_all"> <%= link_to "Go to Games", games_path %></button>
 
-
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<div class="container">
-      <div class="row">
-
-         <div class="search-bar">
-          <%= form_tag games_path, class: 'form-search', method: :get do %>
-          <%= text_field_tag :query,
-          params[:query],
-         class: "form-control",
-         placeholder: "Find a game"
-         %>
-         <% end %>
-       </div>
-   </div>
+    </div>
+  </div>
 </div>
